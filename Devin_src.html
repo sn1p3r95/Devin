@@ -16,7 +16,7 @@
 
 			function initialiser(){
 				nombreSecret = Math.floor(Math.random()*100) + 1;
-				compteur = 6;
+				compteur = 7;
 				entree.value = '';
 				message.innerHTML = '<p> Force a toi !</p>';
 				console.log('Nombre : ', nombreSecret);
@@ -62,7 +62,7 @@
 	</script>
 	<body>
 		<h2> Jeu du Devin : Deviner un nombre entier compris entre 1 et 100</h2>
-		<h3> (On a le droit à 6 tentatives maximum)</h3>
+		<h3> (On a le droit à 7 tentatives maximum)</h3>
 		<input type="text" id="input" value=""/>
 		<button id="valider">Essayer</button>
 		<div id="message"></div>
