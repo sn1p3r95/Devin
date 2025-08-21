@@ -18,17 +18,13 @@
 				nombreSecret = Math.floor(Math.random()*100) + 1;
 				compteur = 7;
 				entree.value = '';
-				message.innerHTML = '<p> Force a toi !</p>';
-				console.log('Nombre : ', nombreSecret);
+				message.innerHTML = '<p> Force à vous :) </p>';
 			}
 			initialiser();
 			valider.addEventListener('click', jouer);				
 			
 			function jouer(){
-				console.log('function jouer()');
 				valeur = parseInt(entree.value);
-				console.log(valeur);
-
 				if(isNaN(valeur) || valeur < 1 || valeur > 100)
 				{
 					message.innerHTML = '<p> Entree invalide ! </p>';
@@ -47,9 +43,9 @@
 					valider.addEventListener('click', reJouer);
 				}else						
 					if(valeur < nombreSecret)
-						message.innerHTML = '<p>Trop Petit, il vous reste '+compteur+' tentative(s) </p>';
+						message.innerHTML = '<p> '+valeur+' est trop Petit, il vous reste '+compteur+' tentative(s) </p>';
 					else if(valeur > nombreSecret)
-						message.innerHTML = '<p>Trop grand, il vous reste '+compteur+' tentative(s) </p>';						
+						message.innerHTML = '<p> '+valeur+' est trop grand, il vous reste '+compteur+' tentative(s) </p>';						
 			}
 
 			function reJouer(){
